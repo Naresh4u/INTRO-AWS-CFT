@@ -1,0 +1,12 @@
+#If you want to connect to below instance by using putty, we should generate key pair from AWS console. 
+#url : https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#LaunchInstanceWizard:
+#First EC2 Instance launch :) 
+Resources:
+  Ec2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: t2.micro
+      ImageId: ami-04681a1dbd79675a5 # Amazon Linux AMI in N.Virginia region.
+      Tags:
+        - Key: name
+          Value: A simple example ami-04681a1dbd79675a5
